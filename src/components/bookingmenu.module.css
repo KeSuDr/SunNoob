@@ -1,0 +1,8 @@
+div.submenu{
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid silver;
+    padding: 10px;
+    margin: 5px;
+}
