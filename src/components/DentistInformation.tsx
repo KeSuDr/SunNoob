@@ -1,6 +1,6 @@
 export default function DentistInformation({name,year_of_experience,area_of_experience,medical_fee}:{name:string,year_of_experience:number,area_of_experience:string,medical_fee:number}){
     return(
-    <div className="max-w-sm bg-white border border-gray-98 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="flex-none max-w-80 md:w-1/3 mr-8 md:pb-4 bg-white border border-gray-98 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
             <img className="rounded-t-lg" src="/img/Dentist.jpeg" alt="" />
         </a>
