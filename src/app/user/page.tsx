@@ -15,11 +15,8 @@ import { addBooking } from "@/redux/features/bookSlice";
 
 export default function BookingPage(){
 
-    const urlParams = useSearchParams()
-    const DentistId = urlParams.get('id')
-    const did = DentistId || ""
-
-
+    // const urlParams = useSearchParams()
+    // const cid = urlParams.get('id')
     // const name = urlParams.get('name')
     // const surname = urlParams.get('surname')
 
@@ -31,7 +28,7 @@ export default function BookingPage(){
 
     // const dispatch = useDispatch<AppDispatch>()
 
-    const makeBooking = () => {
+    const makeUser = () => {
         if(cid && name && surname && dentist && bookDate) {
             const item:BookingItem = {
                 name: name,
@@ -45,7 +42,7 @@ export default function BookingPage(){
     }
 
     const [bookDate, setBookDate] = useState<Dayjs|null>(null)
-    const [dentist, setDentist] = useState<string>(did)
+    const [dentist, setDentist] = useState<string>('hello')
 
     const message = `Name: ${name}\nSurname: ${surname}\nID: ${cid}\nDentist: ${dentist}\nBook Date: ${bookDate}`;
 
@@ -103,10 +100,9 @@ export default function BookingPage(){
                     }}
                 />
                 <DateReserve onDateChange={(value:Dayjs)=>{setBookDate(value)}}
-                onDentistChange={(value:string)=>{setDentist(value)}}
-                DentistId={did}/>
+                onDentistChange={(value:string)=>{setDentist(value)}}/>
                 <Button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2
-                text-white shadow-sm" name="Book Vaccine" onClick={()=>{makeBooking}}>
+                text-white shadow-sm" name="Book Vaccine" onClick={()=>{makeUser}}>
                 Book Vaccine
                 </Button>
             
